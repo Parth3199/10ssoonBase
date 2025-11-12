@@ -10,7 +10,7 @@ from web3 import Web3
 from loguru import logger
 from multiprocessing.dummy import Pool
 CONFIG = {
-    "x420TokenAddress": "0x0FE812a6BA666284e0c414646e694a53F1409393",
+    "x420TokenAddress": "0xbDbddBEd6360e45a7FE0550a9A4F1fAE4C5074e7",
     "UsdcAmount": "1",
     "threadCount": 100,
     "totalMintCount": 100000,
@@ -119,7 +119,7 @@ def mint(thread_id: int, wallet:dict, direction:str):
         logger.error(f"❌ 下单失败 | 返回内容: {result}")
 
 def send(payment_base64: str, direction:str,max_retries: int = 3):
-    url = "https://api.10ssoon.com/payment/bet"
+    url = "https://api.10ssoon.com/sd_payment/bet"
 
     headers = {
         'accept': '*/*',
@@ -127,20 +127,20 @@ def send(payment_base64: str, direction:str,max_retries: int = 3):
         'access-control-expose-headers': 'X-PAYMENT-RESPONSE',
         'cache-control': 'no-cache',
         'content-type': 'text/plain;charset=UTF-8',
-        'origin': 'https://10ssoon.com',
+        'origin': 'https://richsoon.ai',
         'pragma': 'no-cache',
         'priority': 'u=1, i',
-        'referer': 'https://10ssoon.com/',
+        'referer': 'https://richsoon.ai/',
         'sec-ch-ua': '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"macOS"',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-site',
+        'sec-fetch-site': 'cross-site',
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36',
         'x-payment': payment_base64,
     }
-    data = f'{{"direction":"{direction}"}}'
+    data = f'{{"option":{direction}}}'
     # logger.debug(data)
     attempt = 0
     while attempt < max_retries:
@@ -209,9 +209,18 @@ if __name__ == "__main__":
 
     logger.info(f"钱包数量: {wallet_count}, 实际执行任务数: {total}, 并发数: {thread_count}")
     # 奇偶判断涨跌，一涨一跌
-    args = [(i, walletInfos[i], "up" if i % 2 == 0 else "down") for i in range(total)]
+    # args = [(i, walletInfos[i], "up" if i % 2 == 0 else "down") for i in range(total)]
 
-    ROUNDS = 10
+    args = [
+        (
+            i,
+            walletInfos[i],
+            i % 3,  # 取余 3，结果依次为 0, 1, 2, 0, 1, 2 ...
+        )
+        for i in range(total)
+    ]
+
+    ROUNDS = 3
 
     for round_idx in range(1, ROUNDS + 1):
         logger.info(f"🚀 开始第 {round_idx}/{ROUNDS} 轮任务...")
